@@ -33,10 +33,8 @@ require "options"
 require "autocmds"
 
 vim.schedule(function()
-  require "mappings"
+require "mappings"
 end)
-
-require("custom.lsp_python")
 
 -- ===============================================
 -- Tabs setup for 42 / 1337 Norminette
