@@ -58,6 +58,17 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.softtabstop = 4
   end,
 })
+
+-- Apply same settings for Python files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "python" },
+  callback = function()
+    vim.opt_local.expandtab = false
+    vim.opt_local.tabstop = 4
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.softtabstop = 4
+  end,
+})
 -- Folder for swap files
 vim.opt.directory = { os.getenv("HOME") .. "/.local/share/nvim/swap//" }
 vim.cmd("silent !mkdir -p " .. vim.opt.directory:get()[1])

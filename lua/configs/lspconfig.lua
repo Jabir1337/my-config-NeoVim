@@ -11,7 +11,10 @@ vim.lsp.config.pylsp = {
   settings = {
     pylsp = {
       plugins = {
-        pycodestyle = { enabled = true },
+        pycodestyle = { 
+          enabled = true,
+          ignore = { "W191" }  -- Ignore tab indentation warning
+        },
         pyflakes = { enabled = true },
         pylint = { enabled = false },
         mccabe = { enabled = true },
